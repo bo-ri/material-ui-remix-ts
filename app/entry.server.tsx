@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { RemixServer } from '@remix-run/react';
-import type { EntryContext } from '@remix-run/node';
+import { ServerRouter } from 'react-router';
+import type { EntryContext } from 'react-router';
 import createEmotionCache from './src/createEmotionCache';
 import theme from './src/theme';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,20 +13,20 @@ export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext,
+  reactRouterContext: EntryContext,
 ) {
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
   function MuiRemixServer() {
     return (
-      <CacheProvider value={cache}>
+      (<CacheProvider value={cache}>
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <RemixServer context={remixContext} url={request.url} />
+          <ServerRouter context={reactRouterContext} url={request.url} />
         </ThemeProvider>
-      </CacheProvider>
+      </CacheProvider>)
     );
   }
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import type { MetaFunction } from '@remix-run/node';
-import { Link as RemixLink } from '@remix-run/react';
+import type { MetaFunction } from 'react-router';
+import { Link as RemixLink } from 'react-router';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 

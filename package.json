@@ -3,10 +3,10 @@
   "version": "5.0.0",
   "private": true,
   "scripts": {
-    "dev": "remix vite:dev",
-    "build": "remix vite:build",
-    "start": "remix-serve ./build/server/index.js",
-    "typecheck": "tsc"
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -14,16 +14,14 @@
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@mui/material": "latest",
-    "@remix-run/node": "latest",
-    "@remix-run/react": "latest",
-    "@remix-run/serve": "latest",
-    "@remix-run/server-runtime": "latest",
+    "@react-router/node": "latest",
+    "@react-router/serve": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-router": "^7.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "latest",
-    "@remix-run/route-config": "^2.16.5",
+    "@react-router/dev": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest",

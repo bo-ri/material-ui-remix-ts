@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
   useRouteError,
   isRouteErrorResponse,
-} from '@remix-run/react';
+} from 'react-router';
 import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import theme from './src/theme';
