@@ -8,6 +8,7 @@ export default defineConfig({
         ignoredRouteFiles: ["**/*.css"],
         future: {
           unstable_optimizeDeps: true,
+          v3_fetcherPersist: true,
         },
       }),
     tsconfigPaths()
