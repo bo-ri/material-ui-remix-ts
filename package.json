@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@remix-run/dev": "latest",
+    "@remix-run/route-config": "^2.16.5",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest",
