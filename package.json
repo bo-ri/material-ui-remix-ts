@@ -26,7 +26,8 @@
     "@remix-run/dev": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vite": "^6.2.6"
   },
   "engines": {
     "node": ">=20.0.0"
